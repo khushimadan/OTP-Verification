@@ -31,10 +31,10 @@ def email_verification(receiver_email):
     
     if "@" not in receiver_email or count!=2:
         print("Invalid Email ID!")
-        global new_receiver_email
         new_receiver_email=input("Enter correct Email ID:")
         email_verification(new_receiver_email)
-    return new_receiver_email
+        return new_receiver_email
+    return receiver_email
 
 valid_receiver_email=email_verification(receiver_email) #checking if the email is valid or not
 
@@ -85,6 +85,12 @@ else:
         print("Invalid Input!")
 
 server.quit()
+
+
+
+
+
+
 
 
 
